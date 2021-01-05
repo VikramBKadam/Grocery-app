@@ -1,0 +1,98 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <include layout="@layout/app_toolbar"/>
+
+    <RelativeLayout
+        android:layout_below="@+id/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/relative1">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_cart"
+
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+    </androidx.recyclerview.widget.RecyclerView>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/relative1"
+        android:padding="20dp"
+        android:layout_alignParentEnd="true">
+
+        <TextView
+            android:id="@+id/textView_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total : "
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/textView_total_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/textView_total"
+            android:text="total"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/textView_discount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView_total"
+            android:text="Discount : "
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/textView_discount_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView_total_value"
+            android:layout_toRightOf="@id/textView_discount"
+            android:text="discount"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/textView_total_pay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView_discount"
+            android:text="Pay : "
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/textView_total_pay_value"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView_discount_value"
+            android:layout_toRightOf="@id/textView_total_pay"
+            android:text="pay"
+            android:textSize="15sp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView_total_pay_value"
+            android:layout_marginTop="10dp"
+
+            android:text="Checkout" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
